@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ML API</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Arimo"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Hind:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <div class="login">
+      <h1>South Jakarta House Price Prediction</h1>
+
+      <p>
+        Input the quantity of bedroom, quantity of bathroom, quantity of floor,
+        building area size, land area size, certificate type, and location in
+        south jakarta
+      </p>
+      <!-- Main Input For Receiving Query to our ML -->
+      <form action="{{ url_for('predict')}}" method="post">
+        <label for="quantity">Bedroom Quantity (max 6):</label>
+        <input
+          type="number"
+          id="quantity"
+          name="NBED"
+          min="1"
+          max="6"
+          required="required"
+        />
+        <br />
+        <label for="quantity">Bathroom Quantity (max 4):</label>
+        <input
+          type="number"
+          id="quantity"
+          name="NBATH"
+          min="1"
+          max="4"
+          required="required"
+        />
+        <br />
+        <label for="quantity">Floor Quantity (max 3):</label>
+        <input
+          type="number"
+          id="quantity"
+          name="NFLOOR"
+          min="1"
+          max="3"
+          required="required"
+        />
+        <br />
+        <label for="quantity">Building Area (between 15 and 200):</label>
+        <input
+          type="number"
+          id="quantity"
+          name="BLDAR"
+          min="15"
+          max="200"
+          required="required"
+        />
+        <br />
+        <label for="quantity">Land Area (between 26 and 250):</label>
+        <input
+          type="number"
+          id="quantity"
+          name="LNDAR"
+          min="26"
+          max="250"
+          required="required"
+        />
+        <br />
+        <p>Certificate</p>
+        <input type="radio" id="cert" name="CERT" value="SHM" />  
+        <label for="cert">SHM</label><br />
+        <input type="radio" id="cert" name="CERT" value="HGB" />  
+        <label for="cert">HGB</label><br />
+        <input type="radio" id="cert" name="CERT" value="Lainnya" />  
+        <label for="cert">Lainnya</label><br />
+
+        <p>South Jakarta Location</p>
+        <input type="radio" id="loc" name="LOC" value="Cilandak" />  
+        <label for="loc">Cilandak</label><br />
+        <input type="radio" id="loc" name="LOC" value="Kebayoran Baru" />  
+        <label for="loc">Kebayoran Baru</label><br />
+        <input type="radio" id="loc" name="LOC" value="Kebayoran Lama" />  
+        <label for="loc">Kebayoran Lama</label><br />
+        <input type="radio" id="loc" name="LOC" value="Mampang Prapatan" />  
+        <label for="loc">Mampang Prapatan</label><br />
+        <input type="radio" id="loc" name="LOC" value="Pancoran" />  
+        <label for="loc">Pancoran</label><br />
+        <input type="radio" id="loc" name="LOC" value="Pasar Minggu" />  
+        <label for="loc">Pasar Minggu</label><br />
+        <input type="radio" id="loc" name="LOC" value="Pesanggrahan" />  
+        <label for="loc">Pesanggrahan</label><br />
+        <input type="radio" id="loc" name="LOC" value="Setia Budi" />  
+        <label for="loc">Setia Budi</label><br />
+        <input type="radio" id="loc" name="LOC" value="Tebet" />  
+        <label for="loc">Tebet</label><br />
+        <hr />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+          Predict
+        </button>
+      </form>
+
+      <br />
+      <br />
+    </div>
+    {{prediction_text}}
+  </body>
+</html>
