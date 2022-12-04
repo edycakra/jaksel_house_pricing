@@ -2,13 +2,21 @@
 
 by Edycakra Immanuel Sinaga
 
+- A simple machine learning app built with Flask showcasing the implementation of Linear Regression to predict house price in South Jakarta. Dataset is gathered from OLX website.
+
 - ML App: https://jakselhouseprice.herokuapp.com
 
 ### Data Preparation and Preprocessing
 
+![alt text](https://github.com/edycakra/jaksel_house_pricing/blob/main/docs/step0.png)
+
 ### Feature Engineering
 
+![alt text](https://github.com/edycakra/jaksel_house_pricing/blob/main/docs/step1.png)
+
 ### Model
+
+![alt text](https://github.com/edycakra/jaksel_house_pricing/blob/main/docs/step2.png)
 
 ### API Message and Response
 
@@ -45,3 +53,5 @@ by Edycakra Immanuel Sinaga
   - **Status:** 200 <br />
     **Content:** <br />
     `1622404393.874084 `
+
+![alt text](https://github.com/edycakra/jaksel_house_pricing/blob/main/docs/step3.png)
