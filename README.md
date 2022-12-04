@@ -1,15 +1,47 @@
 ### South Jakarta House Pricing Prediction
 
-### Software and Tools Requirements
+by Edycakra Immanuel Sinaga
 
-1. [Github Account](https://github.com)
-2. [HerokuAccount] (https://heroku.com)
-3. [VSCodeIDE] (http://code.visualstudio.com)
+- ML App: https://jakselhouseprice.herokuapp.com
 
-Create a new environment
+### Data Preparation and Preprocessing
+
+### Feature Engineering
+
+### Model
+
+### API Message and Response
+
+- **BASE URL**
+
+  https://jakselhouseprice.herokuapp.com
+
+- **URL**
+
+  `/predict_api`
+
+- **Method:**
+
+  `POST`
+
+- **Data Params Sample**
 
 ```
-conda create -p venv python==3.7 -y
+{
+    "data": {
+        "NBED": 3,
+        "NBATH": 3,
+        "NFLOOR": 2,
+        "BLDAR": 134,
+        "LNDAR": 130,
+        "CERT": "SHM",
+        "LOC": "Pasar Minggu"
+    }
+}
 ```
 
-### Write API Response Here
+- **Success Response:**
+
+  - **Status:** 200 <br />
+    **Content:** <br />
+    `1622404393.874084 `
